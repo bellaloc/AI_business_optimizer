@@ -12,5 +12,8 @@
         "optimization"
     ],
     "author": "Your Name",
-    "license": "MIT"
+    "license": "MIT",
+    "dependencies": {
+        "mysql2": "^3.9.2"
+    }
 }

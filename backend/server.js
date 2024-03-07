@@ -7,8 +7,8 @@ const predictiveAnalyticsRoutes = require('./routes/predictiveAnalyticsRoutes');
 const { PORT } = require('./config/constants');
 const connectDatabase = require('./config/database');
 
-// Connect to MongoDB
-connectDatabase();
+// Connect to MySQL
+const connection = connectDatabase();
 
 const app = express();
 

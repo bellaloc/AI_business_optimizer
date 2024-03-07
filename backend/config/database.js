@@ -1,16 +1,25 @@
 // database.js
 
-const mongoose = require('mongoose');
-const { MONGODB_URI } = require('./constants');
+const mysql = require('mysql2'); // Import mysql2 package
+const { DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE } = require('./constants');
 
-// Connect to MongoDB
-mongoose.connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-}).then(() => {
-    console.log('Connected to MongoDB');
-}).catch((err) => {
-    console.error('Failed to connect to MongoDB:', err);
-});
+function connectDatabase() {
+    const connection = mysql.createConnection({
+        host: DB_HOST,
+        user: DB_USER,
+        password: DB_PASSWORD,
+        database: DB_DATABASE
+    });
+
+    connection.connect((err) => {
+        if (err) {
+            console.error('Error connecting to MySQL database:', err);
+            return;
+        }
+        console.log('Connected to MySQL database');
+    });
+
+    return connection;
+}
+
+module.exports = connectDatabase;

@@ -37,7 +37,8 @@ npm start
 
 # In backend directory
 
-python server.py
+node server.js
+
 
 (http://localhost:5000)
 
