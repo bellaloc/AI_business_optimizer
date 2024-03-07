@@ -33,8 +33,13 @@ npm install
 # In frontend directory
 npm start
 
+(http://localhost:3000)
+
 # In backend directory
-npm start
+
+python server.py
+
+(http://localhost:5000)
 
 Access the application in your web browser: http://localhost:3000
 Technologies Used
