@@ -1,0 +1,16 @@
+{
+    "name": "ai-business-optimizer",
+    "version": "1.0.0",
+    "description": "AI-powered business optimization tool",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "keywords": [
+        "AI",
+        "business",
+        "optimization"
+    ],
+    "author": "Your Name",
+    "license": "MIT"
+}
